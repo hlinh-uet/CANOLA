@@ -47,7 +47,7 @@ def evaluate_T_matrix(T_estimated, T_true):
     """
     # 1. Calculate MAE
     mae = np.mean(np.abs(T_true - T_estimated))
-    print(f"📊 Mean Absolute Error (MAE) between T_estimated and T_true: {mae:.4f}")
+    print(f"Mean Absolute Error (MAE) between T_estimated and T_true: {mae:.4f}")
     print("   (Lower is better)")
 
     # 2. Plot heatmaps for comparison

@@ -101,11 +101,11 @@ def main():
     noise_rate_corrected = 1 - acc_corrected
     
     print("--- Dataset Quality BEFORE and AFTER Correction ---")
-    print(f"📈 ORIGINAL Dataset Accuracy: {acc_original*100:.2f}%")
-    print(f"🔥 ORIGINAL Noise Rate: {noise_rate_original*100:.2f}%")
+    print(f"ORIGINAL Dataset Accuracy: {acc_original*100:.2f}%")
+    print(f"ORIGINAL Noise Rate: {noise_rate_original*100:.2f}%")
     print("-" * 40)
-    print(f"📉 CORRECTED Dataset Accuracy: {acc_corrected*100:.2f}%")
-    print(f"💧 REMAINING Noise Rate: {noise_rate_corrected*100:.2f}%")
+    print(f"CORRECTED Dataset Accuracy: {acc_corrected*100:.2f}%")
+    print(f"REMAINING Noise Rate: {noise_rate_corrected*100:.2f}%")
     print("-" * 60)
     
     # Calculate improvement

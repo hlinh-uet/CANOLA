@@ -47,7 +47,7 @@ def main():
         'true_label': true_labels
     })
     results_df.to_csv('corrected_labels.csv', index=False)
-    print(f"\n✅ Corrected labels saved to 'corrected_labels.csv'")
+    print(f"\nCorrected labels saved to 'corrected_labels.csv'")
 
 
 if __name__ == "__main__":

@@ -19,6 +19,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+.DS_Store
 
 # Virtual environments
 venv/
@@ -33,10 +34,6 @@ ENV/
 *.swo
 *~
 .DS_Store
-
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb
 
 # Data files
 *.csv

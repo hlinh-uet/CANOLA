@@ -54,7 +54,7 @@ class EarlyStopper:
         else:
             self.counter += 1
             if self.counter >= self.patience:
-                print(f"🛑 Early stopping! Loss has not improved for {self.patience} epochs.")
+                print(f"Early stopping! Loss has not improved for {self.patience} epochs.")
                 return True
         return False
 

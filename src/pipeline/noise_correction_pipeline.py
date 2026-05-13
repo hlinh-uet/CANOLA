@@ -168,13 +168,13 @@ class NoiseCorrectionPipeline:
 
         for i in range(self.config['NUM_ITERATIONS']):
             print("\n" + "="*60)
-            print(f"🚀 STARTING CORRECTION ITERATION {i+1}/{self.config['NUM_ITERATIONS']}")
+            print(f"STARTING CORRECTION ITERATION {i+1}/{self.config['NUM_ITERATIONS']}")
             print("="*60)
 
             # Run iteration
             newly_corrected_soft_labels, iteration_loss = self._run_single_iteration()
             
-            print(f"\n📊 End of iteration {i+1} evaluation:")
+            print(f"\nEnd of iteration {i+1} evaluation:")
             print(f"   - Overall Correction Loss: {iteration_loss:.4f}")
 
             # Early stopping logic based on loss
@@ -191,14 +191,14 @@ class NoiseCorrectionPipeline:
                     axis=1
                 ).copy()
                 patience_counter = 0
-                print(f"🎉 New improvement! Best loss so far: {best_loss_so_far:.4f}")
+                print(f"New improvement! Best loss so far: {best_loss_so_far:.4f}")
             else:
                 patience_counter += 1
-                print(f"📉 No loss improvement. Patience: {patience_counter}/{self.config['ITERATION_PATIENCE']}")
+                print(f"No loss improvement. Patience: {patience_counter}/{self.config['ITERATION_PATIENCE']}")
 
             if patience_counter >= self.config['ITERATION_PATIENCE']:
                 print(
-                    f"\n🛑 Early stopping: loss has not improved for "
+                    f"\nEarly stopping: loss has not improved for "
                     f"{self.config['ITERATION_PATIENCE']} iterations."
                 )
                 break
@@ -213,8 +213,8 @@ class NoiseCorrectionPipeline:
             current_soft_labels = updated_soft_labels
 
         print("\n" + "="*60)
-        print("🎉 ITERATIVE LEARNING PROCESS COMPLETED! 🎉")
-        print(f"🏆 Lowest correction loss achieved: {best_loss_so_far:.4f}")
+        print("ITERATIVE LEARNING PROCESS COMPLETED!")
+        print(f"Lowest correction loss achieved: {best_loss_so_far:.4f}")
         print("="*60)
 
         # Return best labels found

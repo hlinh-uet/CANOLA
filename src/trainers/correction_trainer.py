@@ -60,6 +60,6 @@ class CorrectionTrainer:
             if early_stopper and early_stopper(avg_loss):
                 break
         
-        print("✅ Fine-tuning completed.")
+        print("Fine-tuning completed.")
         return self.model, final_avg_loss
 
